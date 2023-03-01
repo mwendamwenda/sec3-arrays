@@ -65,42 +65,64 @@
 // console.log(tip);
 
 //objects
-const mwendaArray = [
-    'Benson',
-    'mwenda',
-    2037 - 1992,                //array
-    'teacher',
-    ['ken','mbuguz','nic']
-];
+// const mwendaArray = [
+//     'Benson',
+//     'mwenda',
+//     2037 - 1992,                //array
+//     'teacher',
+//     ['ken','mbuguz','nic']
+// ];
+
+// const Benson = {
+//     firstName : 'Gichuru',
+//     lastName : 'mwenda',
+//     occupation : 'teacher',
+//     age : 2037 - 1992,
+//     friends : ['ken','mbuguz','nic']
+// };
+// console.log(Benson);
+
+// console.log(Benson.lastName);//dot notation
+// console.log(Benson['lastName']);
+
+// const nameKey = 'Name';
+// console.log(Benson['first' + nameKey]);
+// console.log(Benson['last' + nameKey]);
+
+// const interestedIn =  prompt('what do you want to know about benson? choose between firstName,lastName,age,job,and friends');
+// console.log(Benson[interestedIn]);
+
+// if(Benson[interestedIn]){
+//     console.log(Benson[interestedIn]);
+// }else{
+//     console.log('wrong request! choose amomg the four');
+// };
+
+// Benson.location = 'nairobi';
+// Benson['twitter'] = '@geektarage';
+
+// console.log(Benson);
+
+// console.log(`${Benson.firstName} has ${Benson.friends.length} friends ,and his best friend is called ${Benson.friends[0]}`);
 
 const Benson = {
     firstName : 'Gichuru',
     lastName : 'mwenda',
     occupation : 'teacher',
-    age : 2037 - 1992,
-    friends : ['ken','mbuguz','nic']
-};
-console.log(Benson);
+    birthYeah :1992,
+    friends : ['ken','mbuguz','nic'],
 
-console.log(Benson.lastName);//dot notation
-console.log(Benson['lastName']);
+    hasDriversLicense : true,
 
-const nameKey = 'Name';
-console.log(Benson['first' + nameKey]);
-console.log(Benson['last' + nameKey]);
+    // // calcAge : function(birthYeah){
+    // //     return 2037 - birthYeah;
+    // }
 
-const interestedIn =  prompt('what do you want to know about benson? choose between firstName,lastName,age,job,and friends');
-console.log(Benson[interestedIn]);
+    calcAge : function(){
+        console.log(this);
+        return 2037 - this.birthYeah;
+        
+}
 
-if(Benson[interestedIn]){
-    console.log(Benson[interestedIn]);
-}else{
-    console.log('wrong request! choose amomg the four');
-};
-
-Benson.location = 'nairobi';
-Benson['twitter'] = '@geektarage';
-
-console.log(Benson);
-
-console.log(`${Benson.firstName} has ${Benson.friends.length} friends ,and his best friend is called ${Benson.friends[0]}`);
+}
+console.log(Benson.calcAge());
